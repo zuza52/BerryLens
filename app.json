@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "BerryLens",
+    "slug": "berrylens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1C1E"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.berrylens.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "BerryLens использует камеру для определения ягод и фруктов",
+        "NSPhotoLibraryUsageDescription": "BerryLens может читать фото из галереи для анализа"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A1C1E"
+      },
+      "package": "com.berrylens.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "BerryLens использует камеру для съёмки ягод и фруктов"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "BerryLens читает фото из галереи для анализа"
+        }
+      ]
+    ],
+    "scheme": "berrylens",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
